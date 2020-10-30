@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Clean.master.cs" Inherits="ABA.Clean" %>
+
+
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>Asociación de Bancos Comerciales de la Republica Dominicana</title>
+
+
+<!-- Favicons-->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/radio.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" >
+<link href="css/socialize-bookmarks.css" rel="stylesheet">
+<link href="js/fancybox/source/jquery.fancybox.css?v=2.1.4" rel="stylesheet">
+<link href="check_radio/skins/square/aero.css" rel="stylesheet">
+
+<!-- Toggle Switch -->
+<link rel="stylesheet" href="css/jquery.switch.css">
+
+<!-- Owl Carousel Assets -->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+
+<!-- Google web font -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Jquery -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.8.22.min.js"></script>
+
+
+
+<!-- Radio and checkbox styles -->
+<script src="check_radio/jquery.icheck.js"></script>
+
+<!-- HTML5 and CSS3-in older browsers-->
+<script src="js/modernizr.custom.17475.js"></script>
+
+<!-- Support media queries for IE8 -->
+<script src="js/respond.min.js"></script>
+
+</head>
+
+<body>
+    
+	<header>
+         <div class="container">
+            <div class="row">
+        	<div class="col-md-4 col-xs-3" id="logo"><a href="index.html">Planio Survey template</a></div>
+            
+            <div class="btn-responsive-menu"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
+
+            <nav class="col-md-8 col-xs-9" id="top-nav">
+            	<ul>
+                  
+               </ul>
+            </nav><!-- End Nav -->
+            
+         </div><!-- End row -->
+         </div><!-- End container -->
+        </header> <!-- End header -->
+        	
+            <div class="container">
+             <div class="row">
+                 <div class="col-md-12 main-title">
+                 <h1>Administración</h1>
+                <p></p>
+                </div>
+       		</div>
+            </div>
+
+<section class="container" id="main">
+
+<!-- Start Survey container -->
+<div id="survey_container">
+
+	<asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+</div><!-- end Survey container -->
+</section><!-- end section main container -->
+       
+<footer>
+	<section class="container">
+	<div class="row">
+    	<div class="col-md-4">
+        	<h3>Sobre nosotros</h3>
+            <p>La Asociación de Bancos Comerciales de la República Dominicana, Inc. (ABA) es la entidad que reúne todos los bancos de servicios múltiples que operan en nuestro país. Fue fundada en 1979 con el propósito de agrupar a los bancos comerciales y unificar criterios para el desarrollo del sector y del país.</p>
+        </div>
+        
+        <div class="col-md-4" id="contact">
+        	<h3>Contactanos</h3>
+            <p> </p> 
+                <ul>
+                        <li><i class="icon-home"></i> Ave. Winston Churchill, Esq. Luis F. Thomén, Torre BHD, 6to Piso,Santo Domingo,República Dominicana </li>
+                        <li><i class="icon-phone"></i> Telephone: 809-541-5211/19</li>
+                        <li><i class="icon-envelope"></i> Email: <a href="#">info@aba.org.do </a></li>
+                        
+                    </ul>    
+        </div>
+        
+      
+        
+    </div><!-- end row -->
+  	</section>
+    
+    <section id="footer_2">
+    <div class="container">
+    <div class="row">
+    	<div class="col-md-6">
+                <ul id="footer-nav">
+                	<li>© Asociación de Bancos Comerciales de la República Dominicana </li>
+                </ul>              
+        </div>
+            <div class="col-md-6" style="text-align:center">
+                <ul class="social-bookmarks clearfix">
+                    <li class="facebook"><a href="#">facebook</a></li>
+                    <li class="googleplus"><a href="#">googleplus</a></li>
+                    <li class="twitter"><a href="#">twitter</a></li>
+                    <li class="delicious"><a href="#">delicious</a></li>
+                    <li class="paypal"><a href="#">paypal</a></li>
+                </ul>
+            </div>
+        </div>
+		</div>
+    </section>
+
+</footer> 
+ 
+ <div id="toTop">Regreso al inicio</div>  
+
+<!-- Modal About -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Instrucciones Generales</h4>
+      </div>
+      <div class="modal-body">
+<p>	Las preguntas B.1 a B.6 se refieren a los créditos comerciales otorgados por su banco a empresas corporativas o PYMES según su tamaño. Las definiciones de estos segmentos corresponden a las contenidas en la Tabla 94 del Manual de Requerimiento de Información de la Superintendencia de Bancos. Estas preguntas se refieren tanto a cambios que han experimentado los estándares de aprobación de nuevos créditos (o renovaciones) como a cambios en la demanda por estos créditos. </p>
+
+<p>	Las preguntas C.1 a C.6 se refieren a los créditos otorgados por su banco a personas naturales, incluyendo créditos de consumo (en cuotas, líneas de crédito y tarjetas de crédito) y créditos hipotecarios para la vivienda otorgados durante el 2do trimestre (Abril-Junio) del año 2014.</p>
+
+<p> Las preguntas D.1 a D.2 se refieren a las expectativas que su banco tiene para el próximo trimestre respecto de los estándares de aprobación y condiciones de demanda de los créditos en los diferentes segmentos evaluados en esta encuesta.</p>
+
+<p>	Las preguntas E.1 a E.2 se refieren a las expectativas que su banco tiene para el próximo trimestre respecto de las condiciones de la economía nacional, internacional y, en general, del clima para invertir.</p>
+
+<p>	En todas las preguntas respecto de los estándares de aprobación de nuevos créditos (o renovaciones), las alternativas de respuesta  se refieren a su evolución en el curso de los últimos tres meses, independientemente de si son más o menos restrictivos respecto de los criterios de largo plazo que aplica su institución.  (Nota: Se solicita también considerar como un cambio en los estándares, el caso de una mejor aplicación de los previamente existentes).</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modal About -->
+<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="termsLabel">INDICACIONES</h4>
+      </div>
+      <div class="modal-body">
+         
+ <p>-	Esta encuesta tiene por objeto compilar información estadística periódica respecto a las condiciones imperantes en el mercado de crédito de la banca múltiple. </p>
+ <p>-	Se compone de un conjunto de preguntas dirigidas a ejecutivos superiores de las áreas de la cartera de crédito.</p>
+ <p>-	Los indicadores elaborados a partir de sus respuestas serán de utilidad para monitorear la evolución de la oferta y demanda de crédito en sus segmentos más importantes: comerciales, construcción y de consumo.</p>
+ <p>-	 Además, servirá al sector bancario para identificar cuáles son los factores que más están incidiendo, en forma positiva o negativa en sus posibilidades de expandir el crédito.</p>
+
+ <p><b>INDICACIONES GENERALES</b></p>
+ <p>-	Este formulario será remitido para su llenado vía online, trimestre a trimestre, a la dirección de correo electrónico del ejecutivo designado por la presidencia de su banco. </p>
+ <p>-	Le solicitamos enviarla a la siguiente dirección areatecnica@aba.org.do a más tardar cinco (5) días después de su recepción. Escribir a esa misma dirección para cualquier consulta o aclaración relacionada con la recepción, llenado o envío de las respuestas.</p>
+ <p>-	La información suministrada será estrictamente confidencial y solamente se difundirá la información a nivel consolidado y bajo ninguna circunstancia se mostrarán resultados de los bancos a nivel individual.</p>
+ <p>-	La Asociación de Bancos Comerciales de la República Dominicana, ABA agradece su atenta respuesta a la encuesta y lo invita a seguir colaborando en las próximas oportunidades.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- OTHER JS --> 
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/jquery.tweet.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/quantity-bt.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/retina.js"></script>
+
+
+<!-- FANCYBOX -->
+<script  src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script> 
+<script src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5" type="text/javascript"></script> 
+<script src="js/fancy_func.js" type="text/javascript"></script> 
+   
+</body>
+</html>

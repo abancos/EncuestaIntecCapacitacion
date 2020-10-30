@@ -1,0 +1,169 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace BLL._2014
+{
+    public class EncuestaInfo
+    {
+        public bool Estado { get; set; }
+        public int ID_Banco { get; set; }
+        public string Descripcion { get; set; }
+        public int ID_Encuesta { get; set; }
+        public int ID_Usuario { get; set; }
+        public string Name { get; set; }
+        public string Cargo { get; set; }
+        public string IP { get; set; }
+        public string NombreInts { get; set; }
+        public string NombreyCargo { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
+        public string b1 { get; set; }
+        public string b2 { get; set; }
+        public string b11 { get; set; }
+        public string b12 { get; set; }
+        public string b211 { get; set; }
+        public string b212 { get; set; }
+        public string b213 { get; set; }
+        public string Otrosb21 { get; set; }
+        public string b21o { get; set; }
+        public string b221 { get; set; }
+        public string b231 { get; set; }
+        public string b222 { get; set; }
+        public string b232 { get; set; }
+        public string b223 { get; set; }
+        public string b233 { get; set; }
+        public string b224 { get; set; }
+        public string b234 { get; set; }
+        public string b311 { get; set; }
+        public string b312 { get; set; }
+        public string b313 { get; set; }
+        public string b314 { get; set; }
+        public string b321 { get; set; }
+        public string b331 { get; set; }
+        public string b322 { get; set; }
+        public string b332 { get; set; }
+        public string b323 { get; set; }
+        public string b333 { get; set; }
+        public string b324 { get; set; }
+        public string b334 { get; set; }
+        public string Otrosb31 { get; set; }
+        public string b41 { get; set; }
+        public string b42 { get; set; }
+        public string b511 { get; set; }
+        public string b521 { get; set; }
+        public string b512 { get; set; }
+        public string b522 { get; set; }
+        public string b513 { get; set; }
+        public string b523 { get; set; }
+        public string b514 { get; set; }
+        public string b515 { get; set; }
+        public string b524 { get; set; }
+        public string otros51 { get; set; }
+        public string b611 { get; set; }
+        public string b621 { get; set; }
+        public string b612 { get; set; }
+        public string b622 { get; set; }
+        public string b613 { get; set; }
+        public string b623 { get; set; }
+        public string b614 { get; set; }
+        public string b615 { get; set; }
+        public string otros61 { get; set; }
+        public string otros62 { get; set; }
+        public string b624 { get; set; }
+        public string c1 { get; set; }
+        public string c2 { get; set; }
+        public string c3 { get; set; }
+        public string c11 { get; set; }
+        public string c12 { get; set; }
+        public string c13 { get; set; }
+        public string c211 { get; set; }
+        public string c221 { get; set; }
+        public string c231 { get; set; }
+        public string c212 { get; set; }
+        public string c222 { get; set; }
+        public string c232 { get; set; }
+        public string c213 { get; set; }
+        public string c223 { get; set; }
+        public string c233 { get; set; }
+        public string otrosc2 { get; set; }
+        public string otrosc22 { get; set; }
+        public string c214 { get; set; }
+        public string c224 { get; set; }
+        public string c234 { get; set; }
+        public string c311 { get; set; }
+        public string c321 { get; set; }
+        public string c331 { get; set; }
+        public string c312 { get; set; }
+        public string c322 { get; set; }
+        public string c332 { get; set; }
+        public string c313 { get; set; }
+        public string c323 { get; set; }
+        public string c333 { get; set; }
+        public string otrosc3 { get; set; }
+        public string otrosc32 { get; set; }
+        public string c314 { get; set; }
+        public string c324 { get; set; }
+        public string c334 { get; set; }
+        public string c41 { get; set; }
+        public string c42 { get; set; }
+        public string c43 { get; set; }
+        public string c511 { get; set; }
+        public string c521 { get; set; }
+        public string c531 { get; set; }
+        public string c512 { get; set; }
+        public string c522 { get; set; }
+        public string c532 { get; set; }
+        public string c513 { get; set; }
+        public string c523 { get; set; }
+        public string c533 { get; set; }
+        public string otrosc5 { get; set; }
+        public string c514 { get; set; }
+        public string c524 { get; set; }
+        public string c534 { get; set; }
+        public string c611 { get; set; }
+        public string c621 { get; set; }
+        public string c631 { get; set; }
+        public string c612 { get; set; }
+        public string c622 { get; set; }
+        public string c632 { get; set; }
+        public string c613 { get; set; }
+        public string c623 { get; set; }
+        public string c633 { get; set; }
+        public string otrosc6 { get; set; }
+        public string c614 { get; set; }
+        public string c624 { get; set; }
+        public string c634 { get; set; }
+        public string d11 { get; set; }
+        public string d12 { get; set; }
+        public string d13 { get; set; }
+        public string d14 { get; set; }
+        public string d15 { get; set; }
+        public string d21 { get; set; }
+        public string d22 { get; set; }
+        public string d23 { get; set; }
+        public string d24 { get; set; }
+        public string d25 { get; set; }
+        public string e11 { get; set; }
+        public string e12 { get; set; }
+        public string e13 { get; set; }
+        public string e14 { get; set; }
+        public string e15 { get; set; }
+        public string e21 { get; set; }
+        public string e22 { get; set; }
+        public string e23 { get; set; }
+        public string e24 { get; set; }
+        public string e25 { get; set; }
+        public string Sugerencias { get; set; }
+        public string otrosb331 { get; set; }
+        public string otrosb332 { get; set; }
+        public string otrosb22 { get; set; }
+        public string otrosb222 { get; set; }
+
+
+		
+		
+
+    }
+}
