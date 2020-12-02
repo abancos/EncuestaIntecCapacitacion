@@ -36,11 +36,11 @@ namespace DAL._2014 {
         
         private SelEncuestaCountDataTable tableSelEncuestaCount;
         
-        private SP_EncuestaIntecDataTable tableSP_EncuestaIntec;
-        
         private SelBancos_Disp_IntecDataTable tableSelBancos_Disp_Intec;
         
         private SelEncuestaIntecDataTable tableSelEncuestaIntec;
+        
+        private SP_EncuestaIntecDataTable tableSP_EncuestaIntec;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -88,14 +88,14 @@ namespace DAL._2014 {
                 if ((ds.Tables["SelEncuestaCount"] != null)) {
                     base.Tables.Add(new SelEncuestaCountDataTable(ds.Tables["SelEncuestaCount"]));
                 }
-                if ((ds.Tables["SP_EncuestaIntec"] != null)) {
-                    base.Tables.Add(new SP_EncuestaIntecDataTable(ds.Tables["SP_EncuestaIntec"]));
-                }
                 if ((ds.Tables["SelBancos_Disp_Intec"] != null)) {
                     base.Tables.Add(new SelBancos_Disp_IntecDataTable(ds.Tables["SelBancos_Disp_Intec"]));
                 }
                 if ((ds.Tables["SelEncuestaIntec"] != null)) {
                     base.Tables.Add(new SelEncuestaIntecDataTable(ds.Tables["SelEncuestaIntec"]));
+                }
+                if ((ds.Tables["SP_EncuestaIntec"] != null)) {
+                    base.Tables.Add(new SP_EncuestaIntecDataTable(ds.Tables["SP_EncuestaIntec"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -179,16 +179,6 @@ namespace DAL._2014 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_EncuestaIntecDataTable SP_EncuestaIntec {
-            get {
-                return this.tableSP_EncuestaIntec;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public SelBancos_Disp_IntecDataTable SelBancos_Disp_Intec {
             get {
                 return this.tableSelBancos_Disp_Intec;
@@ -202,6 +192,16 @@ namespace DAL._2014 {
         public SelEncuestaIntecDataTable SelEncuestaIntec {
             get {
                 return this.tableSelEncuestaIntec;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SP_EncuestaIntecDataTable SP_EncuestaIntec {
+            get {
+                return this.tableSP_EncuestaIntec;
             }
         }
         
@@ -290,14 +290,14 @@ namespace DAL._2014 {
                 if ((ds.Tables["SelEncuestaCount"] != null)) {
                     base.Tables.Add(new SelEncuestaCountDataTable(ds.Tables["SelEncuestaCount"]));
                 }
-                if ((ds.Tables["SP_EncuestaIntec"] != null)) {
-                    base.Tables.Add(new SP_EncuestaIntecDataTable(ds.Tables["SP_EncuestaIntec"]));
-                }
                 if ((ds.Tables["SelBancos_Disp_Intec"] != null)) {
                     base.Tables.Add(new SelBancos_Disp_IntecDataTable(ds.Tables["SelBancos_Disp_Intec"]));
                 }
                 if ((ds.Tables["SelEncuestaIntec"] != null)) {
                     base.Tables.Add(new SelEncuestaIntecDataTable(ds.Tables["SelEncuestaIntec"]));
+                }
+                if ((ds.Tables["SP_EncuestaIntec"] != null)) {
+                    base.Tables.Add(new SP_EncuestaIntecDataTable(ds.Tables["SP_EncuestaIntec"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -368,12 +368,6 @@ namespace DAL._2014 {
                     this.tableSelEncuestaCount.InitVars();
                 }
             }
-            this.tableSP_EncuestaIntec = ((SP_EncuestaIntecDataTable)(base.Tables["SP_EncuestaIntec"]));
-            if ((initTable == true)) {
-                if ((this.tableSP_EncuestaIntec != null)) {
-                    this.tableSP_EncuestaIntec.InitVars();
-                }
-            }
             this.tableSelBancos_Disp_Intec = ((SelBancos_Disp_IntecDataTable)(base.Tables["SelBancos_Disp_Intec"]));
             if ((initTable == true)) {
                 if ((this.tableSelBancos_Disp_Intec != null)) {
@@ -384,6 +378,12 @@ namespace DAL._2014 {
             if ((initTable == true)) {
                 if ((this.tableSelEncuestaIntec != null)) {
                     this.tableSelEncuestaIntec.InitVars();
+                }
+            }
+            this.tableSP_EncuestaIntec = ((SP_EncuestaIntecDataTable)(base.Tables["SP_EncuestaIntec"]));
+            if ((initTable == true)) {
+                if ((this.tableSP_EncuestaIntec != null)) {
+                    this.tableSP_EncuestaIntec.InitVars();
                 }
             }
         }
@@ -408,12 +408,12 @@ namespace DAL._2014 {
             base.Tables.Add(this.tableInsBanco);
             this.tableSelEncuestaCount = new SelEncuestaCountDataTable();
             base.Tables.Add(this.tableSelEncuestaCount);
-            this.tableSP_EncuestaIntec = new SP_EncuestaIntecDataTable();
-            base.Tables.Add(this.tableSP_EncuestaIntec);
             this.tableSelBancos_Disp_Intec = new SelBancos_Disp_IntecDataTable();
             base.Tables.Add(this.tableSelBancos_Disp_Intec);
             this.tableSelEncuestaIntec = new SelEncuestaIntecDataTable();
             base.Tables.Add(this.tableSelEncuestaIntec);
+            this.tableSP_EncuestaIntec = new SP_EncuestaIntecDataTable();
+            base.Tables.Add(this.tableSP_EncuestaIntec);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -454,12 +454,6 @@ namespace DAL._2014 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeSP_EncuestaIntec() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeSelBancos_Disp_Intec() {
             return false;
         }
@@ -467,6 +461,12 @@ namespace DAL._2014 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeSelEncuestaIntec() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeSP_EncuestaIntec() {
             return false;
         }
         
@@ -544,13 +544,13 @@ namespace DAL._2014 {
         public delegate void SelEncuestaCountRowChangeEventHandler(object sender, SelEncuestaCountRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void SP_EncuestaIntecRowChangeEventHandler(object sender, SP_EncuestaIntecRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void SelBancos_Disp_IntecRowChangeEventHandler(object sender, SelBancos_Disp_IntecRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void SelEncuestaIntecRowChangeEventHandler(object sender, SelEncuestaIntecRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void SP_EncuestaIntecRowChangeEventHandler(object sender, SP_EncuestaIntecRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2080,239 +2080,6 @@ namespace DAL._2014 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_EncuestaIntecDataTable : global::System.Data.TypedTableBase<SP_EncuestaIntecRow> {
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecDataTable() {
-                this.TableName = "SP_EncuestaIntec";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SP_EncuestaIntecDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected SP_EncuestaIntecDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecRow this[int index] {
-                get {
-                    return ((SP_EncuestaIntecRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddSP_EncuestaIntecRow(SP_EncuestaIntecRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecRow AddSP_EncuestaIntecRow() {
-                SP_EncuestaIntecRow rowSP_EncuestaIntecRow = ((SP_EncuestaIntecRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
-                rowSP_EncuestaIntecRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_EncuestaIntecRow);
-                return rowSP_EncuestaIntecRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                SP_EncuestaIntecDataTable cln = ((SP_EncuestaIntecDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_EncuestaIntecDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecRow NewSP_EncuestaIntecRow() {
-                return ((SP_EncuestaIntecRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_EncuestaIntecRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(SP_EncuestaIntecRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.SP_EncuestaIntecRowChanged != null)) {
-                    this.SP_EncuestaIntecRowChanged(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.SP_EncuestaIntecRowChanging != null)) {
-                    this.SP_EncuestaIntecRowChanging(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.SP_EncuestaIntecRowDeleted != null)) {
-                    this.SP_EncuestaIntecRowDeleted(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.SP_EncuestaIntecRowDeleting != null)) {
-                    this.SP_EncuestaIntecRowDeleting(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveSP_EncuestaIntecRow(SP_EncuestaIntecRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Encuesta ds = new Encuesta();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_EncuestaIntecDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SelBancos_Disp_IntecDataTable : global::System.Data.TypedTableBase<SelBancos_Disp_IntecRow> {
             
             private global::System.Data.DataColumn columnID_BANCO;
@@ -2663,9 +2430,13 @@ namespace DAL._2014 {
             
             private global::System.Data.DataColumn columnMatematicaFinanciera2;
             
+            private global::System.Data.DataColumn columnModelosEconometricos2;
+            
             private global::System.Data.DataColumn columnCiberseguridad2;
             
             private global::System.Data.DataColumn columnPrevencionLavadoActivos2;
+            
+            private global::System.Data.DataColumn columnTransformacionDigital2;
             
             private global::System.Data.DataColumn columnRegulacionDerechoFinanciero2;
             
@@ -2689,15 +2460,11 @@ namespace DAL._2014 {
             
             private global::System.Data.DataColumn columnCertificadoParticipacion4;
             
-            private global::System.Data.DataColumn columnDiplomadoEntidadNacional4;
+            private global::System.Data.DataColumn columnDiplomadoNacional4;
             
-            private global::System.Data.DataColumn columnDiplomadoEntidadInternacional4;
+            private global::System.Data.DataColumn columnCertificacionAcreditacionInternacional4;
             
-            private global::System.Data.DataColumn columnCertificadoEspecialistaNacional4;
-            
-            private global::System.Data.DataColumn columnCertificadoEspecialistaInternacional4;
-            
-            private global::System.Data.DataColumn columnMaestria4;
+            private global::System.Data.DataColumn columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4;
             
             private global::System.Data.DataColumn columnHoras2_5;
             
@@ -2710,6 +2477,8 @@ namespace DAL._2014 {
             private global::System.Data.DataColumn columnHorasMas_5;
             
             private global::System.Data.DataColumn columnSugerencias;
+            
+            private global::System.Data.DataColumn columnFecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3026,6 +2795,14 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ModelosEconometricos2Column {
+                get {
+                    return this.columnModelosEconometricos2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Ciberseguridad2Column {
                 get {
                     return this.columnCiberseguridad2;
@@ -3037,6 +2814,14 @@ namespace DAL._2014 {
             public global::System.Data.DataColumn PrevencionLavadoActivos2Column {
                 get {
                     return this.columnPrevencionLavadoActivos2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransformacionDigital2Column {
+                get {
+                    return this.columnTransformacionDigital2;
                 }
             }
             
@@ -3130,41 +2915,25 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DiplomadoEntidadNacional4Column {
+            public global::System.Data.DataColumn DiplomadoNacional4Column {
                 get {
-                    return this.columnDiplomadoEntidadNacional4;
+                    return this.columnDiplomadoNacional4;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DiplomadoEntidadInternacional4Column {
+            public global::System.Data.DataColumn CertificacionAcreditacionInternacional4Column {
                 get {
-                    return this.columnDiplomadoEntidadInternacional4;
+                    return this.columnCertificacionAcreditacionInternacional4;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CertificadoEspecialistaNacional4Column {
+            public global::System.Data.DataColumn MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Column {
                 get {
-                    return this.columnCertificadoEspecialistaNacional4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CertificadoEspecialistaInternacional4Column {
-                get {
-                    return this.columnCertificadoEspecialistaInternacional4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Maestria4Column {
-                get {
-                    return this.columnMaestria4;
+                    return this.columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4;
                 }
             }
             
@@ -3213,6 +2982,14 @@ namespace DAL._2014 {
             public global::System.Data.DataColumn SugerenciasColumn {
                 get {
                     return this.columnSugerencias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
                 }
             }
             
@@ -3288,8 +3065,10 @@ namespace DAL._2014 {
                         string GestionTesoreria2, 
                         string BigData2, 
                         string MatematicaFinanciera2, 
+                        string ModelosEconometricos2, 
                         string Ciberseguridad2, 
                         string PrevencionLavadoActivos2, 
+                        string TransformacionDigital2, 
                         string RegulacionDerechoFinanciero2, 
                         string GestionFideicomisos2, 
                         string GobiernoCorporativo2, 
@@ -3301,17 +3080,16 @@ namespace DAL._2014 {
                         string Otros3, 
                         string Otrostxt3, 
                         string CertificadoParticipacion4, 
-                        string DiplomadoEntidadNacional4, 
-                        string DiplomadoEntidadInternacional4, 
-                        string CertificadoEspecialistaNacional4, 
-                        string CertificadoEspecialistaInternacional4, 
-                        string Maestria4, 
+                        string DiplomadoNacional4, 
+                        string CertificacionAcreditacionInternacional4, 
+                        string MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4, 
                         string Horas2_5, 
                         string Horas10_5, 
                         string Horas20_5, 
                         string Horas40_5, 
                         string HorasMas_5, 
-                        string Sugerencias) {
+                        string Sugerencias, 
+                        System.DateTime Fecha) {
                 SelEncuestaIntecRow rowSelEncuestaIntecRow = ((SelEncuestaIntecRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3349,8 +3127,10 @@ namespace DAL._2014 {
                         GestionTesoreria2,
                         BigData2,
                         MatematicaFinanciera2,
+                        ModelosEconometricos2,
                         Ciberseguridad2,
                         PrevencionLavadoActivos2,
+                        TransformacionDigital2,
                         RegulacionDerechoFinanciero2,
                         GestionFideicomisos2,
                         GobiernoCorporativo2,
@@ -3362,17 +3142,16 @@ namespace DAL._2014 {
                         Otros3,
                         Otrostxt3,
                         CertificadoParticipacion4,
-                        DiplomadoEntidadNacional4,
-                        DiplomadoEntidadInternacional4,
-                        CertificadoEspecialistaNacional4,
-                        CertificadoEspecialistaInternacional4,
-                        Maestria4,
+                        DiplomadoNacional4,
+                        CertificacionAcreditacionInternacional4,
+                        MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4,
                         Horas2_5,
                         Horas10_5,
                         Horas20_5,
                         Horas40_5,
                         HorasMas_5,
-                        Sugerencias};
+                        Sugerencias,
+                        Fecha};
                 rowSelEncuestaIntecRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSelEncuestaIntecRow);
                 return rowSelEncuestaIntecRow;
@@ -3437,8 +3216,10 @@ namespace DAL._2014 {
                 this.columnGestionTesoreria2 = base.Columns["GestionTesoreria2"];
                 this.columnBigData2 = base.Columns["BigData2"];
                 this.columnMatematicaFinanciera2 = base.Columns["MatematicaFinanciera2"];
+                this.columnModelosEconometricos2 = base.Columns["ModelosEconometricos2"];
                 this.columnCiberseguridad2 = base.Columns["Ciberseguridad2"];
                 this.columnPrevencionLavadoActivos2 = base.Columns["PrevencionLavadoActivos2"];
+                this.columnTransformacionDigital2 = base.Columns["TransformacionDigital2"];
                 this.columnRegulacionDerechoFinanciero2 = base.Columns["RegulacionDerechoFinanciero2"];
                 this.columnGestionFideicomisos2 = base.Columns["GestionFideicomisos2"];
                 this.columnGobiernoCorporativo2 = base.Columns["GobiernoCorporativo2"];
@@ -3450,17 +3231,16 @@ namespace DAL._2014 {
                 this.columnOtros3 = base.Columns["Otros3"];
                 this.columnOtrostxt3 = base.Columns["Otrostxt3"];
                 this.columnCertificadoParticipacion4 = base.Columns["CertificadoParticipacion4"];
-                this.columnDiplomadoEntidadNacional4 = base.Columns["DiplomadoEntidadNacional4"];
-                this.columnDiplomadoEntidadInternacional4 = base.Columns["DiplomadoEntidadInternacional4"];
-                this.columnCertificadoEspecialistaNacional4 = base.Columns["CertificadoEspecialistaNacional4"];
-                this.columnCertificadoEspecialistaInternacional4 = base.Columns["CertificadoEspecialistaInternacional4"];
-                this.columnMaestria4 = base.Columns["Maestria4"];
+                this.columnDiplomadoNacional4 = base.Columns["DiplomadoNacional4"];
+                this.columnCertificacionAcreditacionInternacional4 = base.Columns["CertificacionAcreditacionInternacional4"];
+                this.columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 = base.Columns["MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4"];
                 this.columnHoras2_5 = base.Columns["Horas2_5"];
                 this.columnHoras10_5 = base.Columns["Horas10_5"];
                 this.columnHoras20_5 = base.Columns["Horas20_5"];
                 this.columnHoras40_5 = base.Columns["Horas40_5"];
                 this.columnHorasMas_5 = base.Columns["HorasMas_5"];
                 this.columnSugerencias = base.Columns["Sugerencias"];
+                this.columnFecha = base.Columns["Fecha"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3536,10 +3316,14 @@ namespace DAL._2014 {
                 base.Columns.Add(this.columnBigData2);
                 this.columnMatematicaFinanciera2 = new global::System.Data.DataColumn("MatematicaFinanciera2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMatematicaFinanciera2);
+                this.columnModelosEconometricos2 = new global::System.Data.DataColumn("ModelosEconometricos2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModelosEconometricos2);
                 this.columnCiberseguridad2 = new global::System.Data.DataColumn("Ciberseguridad2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCiberseguridad2);
                 this.columnPrevencionLavadoActivos2 = new global::System.Data.DataColumn("PrevencionLavadoActivos2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrevencionLavadoActivos2);
+                this.columnTransformacionDigital2 = new global::System.Data.DataColumn("TransformacionDigital2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransformacionDigital2);
                 this.columnRegulacionDerechoFinanciero2 = new global::System.Data.DataColumn("RegulacionDerechoFinanciero2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRegulacionDerechoFinanciero2);
                 this.columnGestionFideicomisos2 = new global::System.Data.DataColumn("GestionFideicomisos2", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3562,16 +3346,12 @@ namespace DAL._2014 {
                 base.Columns.Add(this.columnOtrostxt3);
                 this.columnCertificadoParticipacion4 = new global::System.Data.DataColumn("CertificadoParticipacion4", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCertificadoParticipacion4);
-                this.columnDiplomadoEntidadNacional4 = new global::System.Data.DataColumn("DiplomadoEntidadNacional4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiplomadoEntidadNacional4);
-                this.columnDiplomadoEntidadInternacional4 = new global::System.Data.DataColumn("DiplomadoEntidadInternacional4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiplomadoEntidadInternacional4);
-                this.columnCertificadoEspecialistaNacional4 = new global::System.Data.DataColumn("CertificadoEspecialistaNacional4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCertificadoEspecialistaNacional4);
-                this.columnCertificadoEspecialistaInternacional4 = new global::System.Data.DataColumn("CertificadoEspecialistaInternacional4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCertificadoEspecialistaInternacional4);
-                this.columnMaestria4 = new global::System.Data.DataColumn("Maestria4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaestria4);
+                this.columnDiplomadoNacional4 = new global::System.Data.DataColumn("DiplomadoNacional4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiplomadoNacional4);
+                this.columnCertificacionAcreditacionInternacional4 = new global::System.Data.DataColumn("CertificacionAcreditacionInternacional4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCertificacionAcreditacionInternacional4);
+                this.columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 = new global::System.Data.DataColumn("MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4);
                 this.columnHoras2_5 = new global::System.Data.DataColumn("Horas2_5", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoras2_5);
                 this.columnHoras10_5 = new global::System.Data.DataColumn("Horas10_5", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3584,6 +3364,8 @@ namespace DAL._2014 {
                 base.Columns.Add(this.columnHorasMas_5);
                 this.columnSugerencias = new global::System.Data.DataColumn("Sugerencias", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSugerencias);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Seq}, true));
                 this.columnID_Seq.AutoIncrement = true;
@@ -3617,8 +3399,10 @@ namespace DAL._2014 {
                 this.columnGestionTesoreria2.MaxLength = 500;
                 this.columnBigData2.MaxLength = 500;
                 this.columnMatematicaFinanciera2.MaxLength = 500;
+                this.columnModelosEconometricos2.MaxLength = 500;
                 this.columnCiberseguridad2.MaxLength = 500;
                 this.columnPrevencionLavadoActivos2.MaxLength = 500;
+                this.columnTransformacionDigital2.MaxLength = 50;
                 this.columnRegulacionDerechoFinanciero2.MaxLength = 500;
                 this.columnGestionFideicomisos2.MaxLength = 500;
                 this.columnGobiernoCorporativo2.MaxLength = 500;
@@ -3630,11 +3414,9 @@ namespace DAL._2014 {
                 this.columnOtros3.MaxLength = 50;
                 this.columnOtrostxt3.MaxLength = 50;
                 this.columnCertificadoParticipacion4.MaxLength = 500;
-                this.columnDiplomadoEntidadNacional4.MaxLength = 500;
-                this.columnDiplomadoEntidadInternacional4.MaxLength = 500;
-                this.columnCertificadoEspecialistaNacional4.MaxLength = 500;
-                this.columnCertificadoEspecialistaInternacional4.MaxLength = 500;
-                this.columnMaestria4.MaxLength = 500;
+                this.columnDiplomadoNacional4.MaxLength = 500;
+                this.columnCertificacionAcreditacionInternacional4.MaxLength = 500;
+                this.columnMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4.MaxLength = 500;
                 this.columnHoras2_5.MaxLength = 500;
                 this.columnHoras10_5.MaxLength = 500;
                 this.columnHoras20_5.MaxLength = 500;
@@ -3727,6 +3509,239 @@ namespace DAL._2014 {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "SelEncuestaIntecDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SP_EncuestaIntecDataTable : global::System.Data.TypedTableBase<SP_EncuestaIntecRow> {
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecDataTable() {
+                this.TableName = "SP_EncuestaIntec";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SP_EncuestaIntecDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected SP_EncuestaIntecDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecRow this[int index] {
+                get {
+                    return ((SP_EncuestaIntecRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SP_EncuestaIntecRowChangeEventHandler SP_EncuestaIntecRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddSP_EncuestaIntecRow(SP_EncuestaIntecRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecRow AddSP_EncuestaIntecRow() {
+                SP_EncuestaIntecRow rowSP_EncuestaIntecRow = ((SP_EncuestaIntecRow)(this.NewRow()));
+                object[] columnValuesArray = new object[0];
+                rowSP_EncuestaIntecRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_EncuestaIntecRow);
+                return rowSP_EncuestaIntecRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SP_EncuestaIntecDataTable cln = ((SP_EncuestaIntecDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SP_EncuestaIntecDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecRow NewSP_EncuestaIntecRow() {
+                return ((SP_EncuestaIntecRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SP_EncuestaIntecRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SP_EncuestaIntecRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SP_EncuestaIntecRowChanged != null)) {
+                    this.SP_EncuestaIntecRowChanged(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SP_EncuestaIntecRowChanging != null)) {
+                    this.SP_EncuestaIntecRowChanging(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SP_EncuestaIntecRowDeleted != null)) {
+                    this.SP_EncuestaIntecRowDeleted(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SP_EncuestaIntecRowDeleting != null)) {
+                    this.SP_EncuestaIntecRowDeleting(this, new SP_EncuestaIntecRowChangeEvent(((SP_EncuestaIntecRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveSP_EncuestaIntecRow(SP_EncuestaIntecRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Encuesta ds = new Encuesta();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SP_EncuestaIntecDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3982,21 +3997,6 @@ namespace DAL._2014 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetConteoNull() {
                 this[this.tableSelEncuestaCount.ConteoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class SP_EncuestaIntecRow : global::System.Data.DataRow {
-            
-            private SP_EncuestaIntecDataTable tableSP_EncuestaIntec;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SP_EncuestaIntecRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSP_EncuestaIntec = ((SP_EncuestaIntecDataTable)(this.Table));
             }
         }
         
@@ -4577,6 +4577,23 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ModelosEconometricos2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelEncuestaIntec.ModelosEconometricos2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ModelosEconometricos2\' in table \'SelEncuestaIntec\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelEncuestaIntec.ModelosEconometricos2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Ciberseguridad2 {
                 get {
                     try {
@@ -4605,6 +4622,23 @@ namespace DAL._2014 {
                 }
                 set {
                     this[this.tableSelEncuestaIntec.PrevencionLavadoActivos2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TransformacionDigital2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelEncuestaIntec.TransformacionDigital2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TransformacionDigital2\' in table \'SelEncuestaIntec\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelEncuestaIntec.TransformacionDigital2Column] = value;
                 }
             }
             
@@ -4791,85 +4825,51 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DiplomadoEntidadNacional4 {
+            public string DiplomadoNacional4 {
                 get {
                     try {
-                        return ((string)(this[this.tableSelEncuestaIntec.DiplomadoEntidadNacional4Column]));
+                        return ((string)(this[this.tableSelEncuestaIntec.DiplomadoNacional4Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DiplomadoEntidadNacional4\' in table \'SelEncuestaIntec\' is D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiplomadoNacional4\' in table \'SelEncuestaIntec\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSelEncuestaIntec.DiplomadoEntidadNacional4Column] = value;
+                    this[this.tableSelEncuestaIntec.DiplomadoNacional4Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DiplomadoEntidadInternacional4 {
+            public string CertificacionAcreditacionInternacional4 {
                 get {
                     try {
-                        return ((string)(this[this.tableSelEncuestaIntec.DiplomadoEntidadInternacional4Column]));
+                        return ((string)(this[this.tableSelEncuestaIntec.CertificacionAcreditacionInternacional4Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DiplomadoEntidadInternacional4\' in table \'SelEncuestaIntec\'" +
-                                " is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CertificacionAcreditacionInternacional4\' in table \'SelEncue" +
+                                "staIntec\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSelEncuestaIntec.DiplomadoEntidadInternacional4Column] = value;
+                    this[this.tableSelEncuestaIntec.CertificacionAcreditacionInternacional4Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CertificadoEspecialistaNacional4 {
+            public string MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 {
                 get {
                     try {
-                        return ((string)(this[this.tableSelEncuestaIntec.CertificadoEspecialistaNacional4Column]));
+                        return ((string)(this[this.tableSelEncuestaIntec.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CertificadoEspecialistaNacional4\' in table \'SelEncuestaInte" +
-                                "c\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4\' in ta" +
+                                "ble \'SelEncuestaIntec\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSelEncuestaIntec.CertificadoEspecialistaNacional4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CertificadoEspecialistaInternacional4 {
-                get {
-                    try {
-                        return ((string)(this[this.tableSelEncuestaIntec.CertificadoEspecialistaInternacional4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CertificadoEspecialistaInternacional4\' in table \'SelEncuest" +
-                                "aIntec\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSelEncuestaIntec.CertificadoEspecialistaInternacional4Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Maestria4 {
-                get {
-                    try {
-                        return ((string)(this[this.tableSelEncuestaIntec.Maestria4Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Maestria4\' in table \'SelEncuestaIntec\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSelEncuestaIntec.Maestria4Column] = value;
+                    this[this.tableSelEncuestaIntec.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Column] = value;
                 }
             }
             
@@ -4966,6 +4966,22 @@ namespace DAL._2014 {
                 }
                 set {
                     this[this.tableSelEncuestaIntec.SugerenciasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSelEncuestaIntec.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha\' in table \'SelEncuestaIntec\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelEncuestaIntec.FechaColumn] = value;
                 }
             }
             
@@ -5283,6 +5299,18 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsModelosEconometricos2Null() {
+                return this.IsNull(this.tableSelEncuestaIntec.ModelosEconometricos2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetModelosEconometricos2Null() {
+                this[this.tableSelEncuestaIntec.ModelosEconometricos2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCiberseguridad2Null() {
                 return this.IsNull(this.tableSelEncuestaIntec.Ciberseguridad2Column);
             }
@@ -5303,6 +5331,18 @@ namespace DAL._2014 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPrevencionLavadoActivos2Null() {
                 this[this.tableSelEncuestaIntec.PrevencionLavadoActivos2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTransformacionDigital2Null() {
+                return this.IsNull(this.tableSelEncuestaIntec.TransformacionDigital2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTransformacionDigital2Null() {
+                this[this.tableSelEncuestaIntec.TransformacionDigital2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5439,62 +5479,38 @@ namespace DAL._2014 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDiplomadoEntidadNacional4Null() {
-                return this.IsNull(this.tableSelEncuestaIntec.DiplomadoEntidadNacional4Column);
+            public bool IsDiplomadoNacional4Null() {
+                return this.IsNull(this.tableSelEncuestaIntec.DiplomadoNacional4Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDiplomadoEntidadNacional4Null() {
-                this[this.tableSelEncuestaIntec.DiplomadoEntidadNacional4Column] = global::System.Convert.DBNull;
+            public void SetDiplomadoNacional4Null() {
+                this[this.tableSelEncuestaIntec.DiplomadoNacional4Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDiplomadoEntidadInternacional4Null() {
-                return this.IsNull(this.tableSelEncuestaIntec.DiplomadoEntidadInternacional4Column);
+            public bool IsCertificacionAcreditacionInternacional4Null() {
+                return this.IsNull(this.tableSelEncuestaIntec.CertificacionAcreditacionInternacional4Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDiplomadoEntidadInternacional4Null() {
-                this[this.tableSelEncuestaIntec.DiplomadoEntidadInternacional4Column] = global::System.Convert.DBNull;
+            public void SetCertificacionAcreditacionInternacional4Null() {
+                this[this.tableSelEncuestaIntec.CertificacionAcreditacionInternacional4Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCertificadoEspecialistaNacional4Null() {
-                return this.IsNull(this.tableSelEncuestaIntec.CertificadoEspecialistaNacional4Column);
+            public bool IsMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Null() {
+                return this.IsNull(this.tableSelEncuestaIntec.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCertificadoEspecialistaNacional4Null() {
-                this[this.tableSelEncuestaIntec.CertificadoEspecialistaNacional4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCertificadoEspecialistaInternacional4Null() {
-                return this.IsNull(this.tableSelEncuestaIntec.CertificadoEspecialistaInternacional4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCertificadoEspecialistaInternacional4Null() {
-                this[this.tableSelEncuestaIntec.CertificadoEspecialistaInternacional4Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsMaestria4Null() {
-                return this.IsNull(this.tableSelEncuestaIntec.Maestria4Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetMaestria4Null() {
-                this[this.tableSelEncuestaIntec.Maestria4Column] = global::System.Convert.DBNull;
+            public void SetMaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Null() {
+                this[this.tableSelEncuestaIntec.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5567,6 +5583,33 @@ namespace DAL._2014 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSugerenciasNull() {
                 this[this.tableSelEncuestaIntec.SugerenciasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableSelEncuestaIntec.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableSelEncuestaIntec.FechaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SP_EncuestaIntecRow : global::System.Data.DataRow {
+            
+            private SP_EncuestaIntecDataTable tableSP_EncuestaIntec;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SP_EncuestaIntecRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_EncuestaIntec = ((SP_EncuestaIntecDataTable)(this.Table));
             }
         }
         
@@ -5778,40 +5821,6 @@ namespace DAL._2014 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class SP_EncuestaIntecRowChangeEvent : global::System.EventArgs {
-            
-            private SP_EncuestaIntecRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecRowChangeEvent(SP_EncuestaIntecRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SP_EncuestaIntecRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class SelBancos_Disp_IntecRowChangeEvent : global::System.EventArgs {
             
             private SelBancos_Disp_IntecRow eventRow;
@@ -5862,6 +5871,40 @@ namespace DAL._2014 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SelEncuestaIntecRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class SP_EncuestaIntecRowChangeEvent : global::System.EventArgs {
+            
+            private SP_EncuestaIntecRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecRowChangeEvent(SP_EncuestaIntecRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SP_EncuestaIntecRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6951,1025 +6994,6 @@ namespace DAL._2014.EncuestaTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_EncuestaIntecTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SP_EncuestaIntecTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DAL.Properties.Settings.Default.abadrConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_EncuestaIntec";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Encuesta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IP", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cargo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreInts", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreyCargo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionIntegralRiesgos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoLiquidez1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoCredito1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoMercado1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoOperativo1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIIFContabilidad1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionTesoreria1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BigData1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MatematicaFinanciera1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciberseguridad1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrevencionLavadoActivos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegulacionDerechoFinanciero1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionFideicomisos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GobiernoCorporativo1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otrostxt1", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionIntegralRiesgos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoLiquidez2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoCredito2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoMercado2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoOperativo2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIIFContabilidad2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionTesoreria2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BigData2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MatematicaFinanciera2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciberseguridad2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrevencionLavadoActivos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegulacionDerechoFinanciero2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionFideicomisos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GobiernoCorporativo2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConsejoDirectivo3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AltaGerencia3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GerenciaMedia3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EjecutivosNegocios3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otrostxt3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificadoParticipacion4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiplomadoEntidadNacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiplomadoEntidadInternacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificadoEspecialistaNacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificadoEspecialistaInternacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Maestria4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas2_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas10_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas20_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas40_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HorasMas_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sugerenias", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(
-                    Encuesta.SP_EncuestaIntecDataTable dataTable, 
-                    global::System.Nullable<int> ID_Encuesta, 
-                    global::System.Nullable<int> ID_Usuario, 
-                    string IP, 
-                    string Cargo, 
-                    string NombreInts, 
-                    string NombreyCargo, 
-                    string Telefono, 
-                    string Correo, 
-                    global::System.Nullable<int> GestionIntegralRiesgos1, 
-                    global::System.Nullable<int> RiesgoLiquidez1, 
-                    global::System.Nullable<int> RiesgoCredito1, 
-                    global::System.Nullable<int> RiesgoMercado1, 
-                    global::System.Nullable<int> RiesgoOperativo1, 
-                    global::System.Nullable<int> NIIFContabilidad1, 
-                    global::System.Nullable<int> GestionTesoreria1, 
-                    global::System.Nullable<int> BigData1, 
-                    global::System.Nullable<int> MatematicaFinanciera1, 
-                    global::System.Nullable<int> Ciberseguridad1, 
-                    global::System.Nullable<int> PrevencionLavadoActivos1, 
-                    global::System.Nullable<int> RegulacionDerechoFinanciero1, 
-                    global::System.Nullable<int> GestionFideicomisos1, 
-                    global::System.Nullable<int> GobiernoCorporativo1, 
-                    global::System.Nullable<int> Otros1, 
-                    string Otrostxt1, 
-                    string GestionIntegralRiesgos2, 
-                    string RiesgoLiquidez2, 
-                    string RiesgoCredito2, 
-                    string RiesgoMercado2, 
-                    string RiesgoOperativo2, 
-                    string NIIFContabilidad2, 
-                    string GestionTesoreria2, 
-                    string BigData2, 
-                    string MatematicaFinanciera2, 
-                    string Ciberseguridad2, 
-                    string PrevencionLavadoActivos2, 
-                    string RegulacionDerechoFinanciero2, 
-                    string GestionFideicomisos2, 
-                    string GobiernoCorporativo2, 
-                    string Otros2, 
-                    string ConsejoDirectivo3, 
-                    string AltaGerencia3, 
-                    string GerenciaMedia3, 
-                    string EjecutivosNegocios3, 
-                    string Otros3, 
-                    string Otrostxt3, 
-                    string CertificadoParticipacion4, 
-                    string DiplomadoEntidadNacional4, 
-                    string DiplomadoEntidadInternacional4, 
-                    string CertificadoEspecialistaNacional4, 
-                    string CertificadoEspecialistaInternacional4, 
-                    string Maestria4, 
-                    string Horas2_5, 
-                    string Horas10_5, 
-                    string Horas20_5, 
-                    string Horas40_5, 
-                    string HorasMas_5, 
-                    string Sugerenias) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ID_Encuesta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Encuesta.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((IP == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(IP));
-            }
-            if ((Cargo == null)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Cargo));
-            }
-            if ((NombreInts == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(NombreInts));
-            }
-            if ((NombreyCargo == null)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(NombreyCargo));
-            }
-            if ((Telefono == null)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(Telefono));
-            }
-            if ((Correo == null)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(Correo));
-            }
-            if ((GestionIntegralRiesgos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(GestionIntegralRiesgos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoLiquidez1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(RiesgoLiquidez1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoCredito1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(RiesgoCredito1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoMercado1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(RiesgoMercado1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoOperativo1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[13].Value = ((int)(RiesgoOperativo1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((NIIFContabilidad1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(NIIFContabilidad1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((GestionTesoreria1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(GestionTesoreria1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((BigData1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(BigData1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((MatematicaFinanciera1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(MatematicaFinanciera1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Ciberseguridad1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[18].Value = ((int)(Ciberseguridad1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((PrevencionLavadoActivos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[19].Value = ((int)(PrevencionLavadoActivos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((RegulacionDerechoFinanciero1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[20].Value = ((int)(RegulacionDerechoFinanciero1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((GestionFideicomisos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[21].Value = ((int)(GestionFideicomisos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((GobiernoCorporativo1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[22].Value = ((int)(GobiernoCorporativo1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Otros1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[23].Value = ((int)(Otros1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Otrostxt1 == null)) {
-                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[24].Value = ((string)(Otrostxt1));
-            }
-            if ((GestionIntegralRiesgos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[25].Value = ((string)(GestionIntegralRiesgos2));
-            }
-            if ((RiesgoLiquidez2 == null)) {
-                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(RiesgoLiquidez2));
-            }
-            if ((RiesgoCredito2 == null)) {
-                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[27].Value = ((string)(RiesgoCredito2));
-            }
-            if ((RiesgoMercado2 == null)) {
-                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[28].Value = ((string)(RiesgoMercado2));
-            }
-            if ((RiesgoOperativo2 == null)) {
-                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[29].Value = ((string)(RiesgoOperativo2));
-            }
-            if ((NIIFContabilidad2 == null)) {
-                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(NIIFContabilidad2));
-            }
-            if ((GestionTesoreria2 == null)) {
-                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GestionTesoreria2));
-            }
-            if ((BigData2 == null)) {
-                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(BigData2));
-            }
-            if ((MatematicaFinanciera2 == null)) {
-                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(MatematicaFinanciera2));
-            }
-            if ((Ciberseguridad2 == null)) {
-                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[34].Value = ((string)(Ciberseguridad2));
-            }
-            if ((PrevencionLavadoActivos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(PrevencionLavadoActivos2));
-            }
-            if ((RegulacionDerechoFinanciero2 == null)) {
-                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(RegulacionDerechoFinanciero2));
-            }
-            if ((GestionFideicomisos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(GestionFideicomisos2));
-            }
-            if ((GobiernoCorporativo2 == null)) {
-                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(GobiernoCorporativo2));
-            }
-            if ((Otros2 == null)) {
-                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(Otros2));
-            }
-            if ((ConsejoDirectivo3 == null)) {
-                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(ConsejoDirectivo3));
-            }
-            if ((AltaGerencia3 == null)) {
-                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(AltaGerencia3));
-            }
-            if ((GerenciaMedia3 == null)) {
-                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(GerenciaMedia3));
-            }
-            if ((EjecutivosNegocios3 == null)) {
-                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(EjecutivosNegocios3));
-            }
-            if ((Otros3 == null)) {
-                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(Otros3));
-            }
-            if ((Otrostxt3 == null)) {
-                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(Otrostxt3));
-            }
-            if ((CertificadoParticipacion4 == null)) {
-                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[46].Value = ((string)(CertificadoParticipacion4));
-            }
-            if ((DiplomadoEntidadNacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(DiplomadoEntidadNacional4));
-            }
-            if ((DiplomadoEntidadInternacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[48].Value = ((string)(DiplomadoEntidadInternacional4));
-            }
-            if ((CertificadoEspecialistaNacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(CertificadoEspecialistaNacional4));
-            }
-            if ((CertificadoEspecialistaInternacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(CertificadoEspecialistaInternacional4));
-            }
-            if ((Maestria4 == null)) {
-                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(Maestria4));
-            }
-            if ((Horas2_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[52].Value = ((string)(Horas2_5));
-            }
-            if ((Horas10_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[53].Value = ((string)(Horas10_5));
-            }
-            if ((Horas20_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(Horas20_5));
-            }
-            if ((Horas40_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(Horas40_5));
-            }
-            if ((HorasMas_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(HorasMas_5));
-            }
-            if ((Sugerenias == null)) {
-                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(Sugerenias));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Encuesta.SP_EncuestaIntecDataTable GetData(
-                    global::System.Nullable<int> ID_Encuesta, 
-                    global::System.Nullable<int> ID_Usuario, 
-                    string IP, 
-                    string Cargo, 
-                    string NombreInts, 
-                    string NombreyCargo, 
-                    string Telefono, 
-                    string Correo, 
-                    global::System.Nullable<int> GestionIntegralRiesgos1, 
-                    global::System.Nullable<int> RiesgoLiquidez1, 
-                    global::System.Nullable<int> RiesgoCredito1, 
-                    global::System.Nullable<int> RiesgoMercado1, 
-                    global::System.Nullable<int> RiesgoOperativo1, 
-                    global::System.Nullable<int> NIIFContabilidad1, 
-                    global::System.Nullable<int> GestionTesoreria1, 
-                    global::System.Nullable<int> BigData1, 
-                    global::System.Nullable<int> MatematicaFinanciera1, 
-                    global::System.Nullable<int> Ciberseguridad1, 
-                    global::System.Nullable<int> PrevencionLavadoActivos1, 
-                    global::System.Nullable<int> RegulacionDerechoFinanciero1, 
-                    global::System.Nullable<int> GestionFideicomisos1, 
-                    global::System.Nullable<int> GobiernoCorporativo1, 
-                    global::System.Nullable<int> Otros1, 
-                    string Otrostxt1, 
-                    string GestionIntegralRiesgos2, 
-                    string RiesgoLiquidez2, 
-                    string RiesgoCredito2, 
-                    string RiesgoMercado2, 
-                    string RiesgoOperativo2, 
-                    string NIIFContabilidad2, 
-                    string GestionTesoreria2, 
-                    string BigData2, 
-                    string MatematicaFinanciera2, 
-                    string Ciberseguridad2, 
-                    string PrevencionLavadoActivos2, 
-                    string RegulacionDerechoFinanciero2, 
-                    string GestionFideicomisos2, 
-                    string GobiernoCorporativo2, 
-                    string Otros2, 
-                    string ConsejoDirectivo3, 
-                    string AltaGerencia3, 
-                    string GerenciaMedia3, 
-                    string EjecutivosNegocios3, 
-                    string Otros3, 
-                    string Otrostxt3, 
-                    string CertificadoParticipacion4, 
-                    string DiplomadoEntidadNacional4, 
-                    string DiplomadoEntidadInternacional4, 
-                    string CertificadoEspecialistaNacional4, 
-                    string CertificadoEspecialistaInternacional4, 
-                    string Maestria4, 
-                    string Horas2_5, 
-                    string Horas10_5, 
-                    string Horas20_5, 
-                    string Horas40_5, 
-                    string HorasMas_5, 
-                    string Sugerenias) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ID_Encuesta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Encuesta.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((IP == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(IP));
-            }
-            if ((Cargo == null)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Cargo));
-            }
-            if ((NombreInts == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(NombreInts));
-            }
-            if ((NombreyCargo == null)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(NombreyCargo));
-            }
-            if ((Telefono == null)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(Telefono));
-            }
-            if ((Correo == null)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(Correo));
-            }
-            if ((GestionIntegralRiesgos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(GestionIntegralRiesgos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoLiquidez1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(RiesgoLiquidez1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoCredito1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(RiesgoCredito1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoMercado1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(RiesgoMercado1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((RiesgoOperativo1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[13].Value = ((int)(RiesgoOperativo1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((NIIFContabilidad1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(NIIFContabilidad1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((GestionTesoreria1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(GestionTesoreria1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((BigData1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(BigData1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((MatematicaFinanciera1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(MatematicaFinanciera1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Ciberseguridad1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[18].Value = ((int)(Ciberseguridad1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((PrevencionLavadoActivos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[19].Value = ((int)(PrevencionLavadoActivos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((RegulacionDerechoFinanciero1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[20].Value = ((int)(RegulacionDerechoFinanciero1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((GestionFideicomisos1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[21].Value = ((int)(GestionFideicomisos1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((GobiernoCorporativo1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[22].Value = ((int)(GobiernoCorporativo1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Otros1.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[23].Value = ((int)(Otros1.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Otrostxt1 == null)) {
-                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[24].Value = ((string)(Otrostxt1));
-            }
-            if ((GestionIntegralRiesgos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[25].Value = ((string)(GestionIntegralRiesgos2));
-            }
-            if ((RiesgoLiquidez2 == null)) {
-                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(RiesgoLiquidez2));
-            }
-            if ((RiesgoCredito2 == null)) {
-                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[27].Value = ((string)(RiesgoCredito2));
-            }
-            if ((RiesgoMercado2 == null)) {
-                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[28].Value = ((string)(RiesgoMercado2));
-            }
-            if ((RiesgoOperativo2 == null)) {
-                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[29].Value = ((string)(RiesgoOperativo2));
-            }
-            if ((NIIFContabilidad2 == null)) {
-                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(NIIFContabilidad2));
-            }
-            if ((GestionTesoreria2 == null)) {
-                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GestionTesoreria2));
-            }
-            if ((BigData2 == null)) {
-                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(BigData2));
-            }
-            if ((MatematicaFinanciera2 == null)) {
-                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(MatematicaFinanciera2));
-            }
-            if ((Ciberseguridad2 == null)) {
-                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[34].Value = ((string)(Ciberseguridad2));
-            }
-            if ((PrevencionLavadoActivos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(PrevencionLavadoActivos2));
-            }
-            if ((RegulacionDerechoFinanciero2 == null)) {
-                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(RegulacionDerechoFinanciero2));
-            }
-            if ((GestionFideicomisos2 == null)) {
-                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(GestionFideicomisos2));
-            }
-            if ((GobiernoCorporativo2 == null)) {
-                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(GobiernoCorporativo2));
-            }
-            if ((Otros2 == null)) {
-                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(Otros2));
-            }
-            if ((ConsejoDirectivo3 == null)) {
-                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(ConsejoDirectivo3));
-            }
-            if ((AltaGerencia3 == null)) {
-                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(AltaGerencia3));
-            }
-            if ((GerenciaMedia3 == null)) {
-                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(GerenciaMedia3));
-            }
-            if ((EjecutivosNegocios3 == null)) {
-                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(EjecutivosNegocios3));
-            }
-            if ((Otros3 == null)) {
-                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(Otros3));
-            }
-            if ((Otrostxt3 == null)) {
-                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(Otrostxt3));
-            }
-            if ((CertificadoParticipacion4 == null)) {
-                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[46].Value = ((string)(CertificadoParticipacion4));
-            }
-            if ((DiplomadoEntidadNacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(DiplomadoEntidadNacional4));
-            }
-            if ((DiplomadoEntidadInternacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[48].Value = ((string)(DiplomadoEntidadInternacional4));
-            }
-            if ((CertificadoEspecialistaNacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(CertificadoEspecialistaNacional4));
-            }
-            if ((CertificadoEspecialistaInternacional4 == null)) {
-                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(CertificadoEspecialistaInternacional4));
-            }
-            if ((Maestria4 == null)) {
-                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(Maestria4));
-            }
-            if ((Horas2_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[52].Value = ((string)(Horas2_5));
-            }
-            if ((Horas10_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[53].Value = ((string)(Horas10_5));
-            }
-            if ((Horas20_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(Horas20_5));
-            }
-            if ((Horas40_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(Horas40_5));
-            }
-            if ((HorasMas_5 == null)) {
-                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(HorasMas_5));
-            }
-            if ((Sugerenias == null)) {
-                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(Sugerenias));
-            }
-            Encuesta.SP_EncuestaIntecDataTable dataTable = new Encuesta.SP_EncuestaIntecDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class SelBancos_Disp_IntecTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -8299,8 +7323,10 @@ namespace DAL._2014.EncuestaTableAdapters {
             tableMapping.ColumnMappings.Add("GestionTesoreria2", "GestionTesoreria2");
             tableMapping.ColumnMappings.Add("BigData2", "BigData2");
             tableMapping.ColumnMappings.Add("MatematicaFinanciera2", "MatematicaFinanciera2");
+            tableMapping.ColumnMappings.Add("ModelosEconometricos2", "ModelosEconometricos2");
             tableMapping.ColumnMappings.Add("Ciberseguridad2", "Ciberseguridad2");
             tableMapping.ColumnMappings.Add("PrevencionLavadoActivos2", "PrevencionLavadoActivos2");
+            tableMapping.ColumnMappings.Add("TransformacionDigital2", "TransformacionDigital2");
             tableMapping.ColumnMappings.Add("RegulacionDerechoFinanciero2", "RegulacionDerechoFinanciero2");
             tableMapping.ColumnMappings.Add("GestionFideicomisos2", "GestionFideicomisos2");
             tableMapping.ColumnMappings.Add("GobiernoCorporativo2", "GobiernoCorporativo2");
@@ -8312,17 +7338,16 @@ namespace DAL._2014.EncuestaTableAdapters {
             tableMapping.ColumnMappings.Add("Otros3", "Otros3");
             tableMapping.ColumnMappings.Add("Otrostxt3", "Otrostxt3");
             tableMapping.ColumnMappings.Add("CertificadoParticipacion4", "CertificadoParticipacion4");
-            tableMapping.ColumnMappings.Add("DiplomadoEntidadNacional4", "DiplomadoEntidadNacional4");
-            tableMapping.ColumnMappings.Add("DiplomadoEntidadInternacional4", "DiplomadoEntidadInternacional4");
-            tableMapping.ColumnMappings.Add("CertificadoEspecialistaNacional4", "CertificadoEspecialistaNacional4");
-            tableMapping.ColumnMappings.Add("CertificadoEspecialistaInternacional4", "CertificadoEspecialistaInternacional4");
-            tableMapping.ColumnMappings.Add("Maestria4", "Maestria4");
+            tableMapping.ColumnMappings.Add("DiplomadoNacional4", "DiplomadoNacional4");
+            tableMapping.ColumnMappings.Add("CertificacionAcreditacionInternacional4", "CertificacionAcreditacionInternacional4");
+            tableMapping.ColumnMappings.Add("MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4", "MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4");
             tableMapping.ColumnMappings.Add("Horas2_5", "Horas2_5");
             tableMapping.ColumnMappings.Add("Horas10_5", "Horas10_5");
             tableMapping.ColumnMappings.Add("Horas20_5", "Horas20_5");
             tableMapping.ColumnMappings.Add("Horas40_5", "Horas40_5");
             tableMapping.ColumnMappings.Add("HorasMas_5", "HorasMas_5");
             tableMapping.ColumnMappings.Add("Sugerencias", "Sugerencias");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8364,6 +7389,1025 @@ namespace DAL._2014.EncuestaTableAdapters {
         public virtual Encuesta.SelEncuestaIntecDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             Encuesta.SelEncuestaIntecDataTable dataTable = new Encuesta.SelEncuestaIntecDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_EncuestaIntecTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public SP_EncuestaIntecTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::DAL.Properties.Settings.Default.abadrConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_EncuestaIntec";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Encuesta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IP", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cargo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreInts", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreyCargo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionIntegralRiesgos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoLiquidez1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoCredito1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoMercado1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoOperativo1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIIFContabilidad1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionTesoreria1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BigData1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MatematicaFinanciera1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciberseguridad1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrevencionLavadoActivos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegulacionDerechoFinanciero1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionFideicomisos1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GobiernoCorporativo1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otrostxt1", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionIntegralRiesgos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoLiquidez2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoCredito2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoMercado2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RiesgoOperativo2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIIFContabilidad2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionTesoreria2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BigData2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MatematicaFinanciera2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ModelosEconometricos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciberseguridad2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrevencionLavadoActivos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransformacionDigital2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegulacionDerechoFinanciero2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GestionFideicomisos2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GobiernoCorporativo2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros2", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ConsejoDirectivo3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AltaGerencia3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GerenciaMedia3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EjecutivosNegocios3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otros3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Otrostxt3", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificadoParticipacion4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DiplomadoNacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificacionAcreditacionInternacional4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas2_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas10_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas20_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas40_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HorasMas_5", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sugerenias", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(
+                    Encuesta.SP_EncuestaIntecDataTable dataTable, 
+                    global::System.Nullable<int> ID_Encuesta, 
+                    global::System.Nullable<int> ID_Usuario, 
+                    string IP, 
+                    string Cargo, 
+                    string NombreInts, 
+                    string NombreyCargo, 
+                    string Telefono, 
+                    string Correo, 
+                    global::System.Nullable<int> GestionIntegralRiesgos1, 
+                    global::System.Nullable<int> RiesgoLiquidez1, 
+                    global::System.Nullable<int> RiesgoCredito1, 
+                    global::System.Nullable<int> RiesgoMercado1, 
+                    global::System.Nullable<int> RiesgoOperativo1, 
+                    global::System.Nullable<int> NIIFContabilidad1, 
+                    global::System.Nullable<int> GestionTesoreria1, 
+                    global::System.Nullable<int> BigData1, 
+                    global::System.Nullable<int> MatematicaFinanciera1, 
+                    global::System.Nullable<int> Ciberseguridad1, 
+                    global::System.Nullable<int> PrevencionLavadoActivos1, 
+                    global::System.Nullable<int> RegulacionDerechoFinanciero1, 
+                    global::System.Nullable<int> GestionFideicomisos1, 
+                    global::System.Nullable<int> GobiernoCorporativo1, 
+                    global::System.Nullable<int> Otros1, 
+                    string Otrostxt1, 
+                    string GestionIntegralRiesgos2, 
+                    string RiesgoLiquidez2, 
+                    string RiesgoCredito2, 
+                    string RiesgoMercado2, 
+                    string RiesgoOperativo2, 
+                    string NIIFContabilidad2, 
+                    string GestionTesoreria2, 
+                    string BigData2, 
+                    string MatematicaFinanciera2, 
+                    string ModelosEconometricos2, 
+                    string Ciberseguridad2, 
+                    string PrevencionLavadoActivos2, 
+                    string TransformacionDigital2, 
+                    string RegulacionDerechoFinanciero2, 
+                    string GestionFideicomisos2, 
+                    string GobiernoCorporativo2, 
+                    string Otros2, 
+                    string ConsejoDirectivo3, 
+                    string AltaGerencia3, 
+                    string GerenciaMedia3, 
+                    string EjecutivosNegocios3, 
+                    string Otros3, 
+                    string Otrostxt3, 
+                    string CertificadoParticipacion4, 
+                    string DiplomadoNacional4, 
+                    string CertificacionAcreditacionInternacional4, 
+                    string MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4, 
+                    string Horas2_5, 
+                    string Horas10_5, 
+                    string Horas20_5, 
+                    string Horas40_5, 
+                    string HorasMas_5, 
+                    string Sugerenias) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Encuesta.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Encuesta.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ID_Usuario.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Usuario.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((IP == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(IP));
+            }
+            if ((Cargo == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Cargo));
+            }
+            if ((NombreInts == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(NombreInts));
+            }
+            if ((NombreyCargo == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(NombreyCargo));
+            }
+            if ((Telefono == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(Correo));
+            }
+            if ((GestionIntegralRiesgos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(GestionIntegralRiesgos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoLiquidez1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(RiesgoLiquidez1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoCredito1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(RiesgoCredito1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoMercado1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(RiesgoMercado1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoOperativo1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[13].Value = ((int)(RiesgoOperativo1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((NIIFContabilidad1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(NIIFContabilidad1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((GestionTesoreria1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(GestionTesoreria1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((BigData1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(BigData1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((MatematicaFinanciera1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(MatematicaFinanciera1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Ciberseguridad1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[18].Value = ((int)(Ciberseguridad1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((PrevencionLavadoActivos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((int)(PrevencionLavadoActivos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((RegulacionDerechoFinanciero1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((int)(RegulacionDerechoFinanciero1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((GestionFideicomisos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[21].Value = ((int)(GestionFideicomisos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((GobiernoCorporativo1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[22].Value = ((int)(GobiernoCorporativo1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Otros1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[23].Value = ((int)(Otros1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Otrostxt1 == null)) {
+                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[24].Value = ((string)(Otrostxt1));
+            }
+            if ((GestionIntegralRiesgos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[25].Value = ((string)(GestionIntegralRiesgos2));
+            }
+            if ((RiesgoLiquidez2 == null)) {
+                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(RiesgoLiquidez2));
+            }
+            if ((RiesgoCredito2 == null)) {
+                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[27].Value = ((string)(RiesgoCredito2));
+            }
+            if ((RiesgoMercado2 == null)) {
+                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[28].Value = ((string)(RiesgoMercado2));
+            }
+            if ((RiesgoOperativo2 == null)) {
+                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[29].Value = ((string)(RiesgoOperativo2));
+            }
+            if ((NIIFContabilidad2 == null)) {
+                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(NIIFContabilidad2));
+            }
+            if ((GestionTesoreria2 == null)) {
+                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GestionTesoreria2));
+            }
+            if ((BigData2 == null)) {
+                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(BigData2));
+            }
+            if ((MatematicaFinanciera2 == null)) {
+                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(MatematicaFinanciera2));
+            }
+            if ((ModelosEconometricos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[34].Value = ((string)(ModelosEconometricos2));
+            }
+            if ((Ciberseguridad2 == null)) {
+                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(Ciberseguridad2));
+            }
+            if ((PrevencionLavadoActivos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(PrevencionLavadoActivos2));
+            }
+            if ((TransformacionDigital2 == null)) {
+                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(TransformacionDigital2));
+            }
+            if ((RegulacionDerechoFinanciero2 == null)) {
+                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(RegulacionDerechoFinanciero2));
+            }
+            if ((GestionFideicomisos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(GestionFideicomisos2));
+            }
+            if ((GobiernoCorporativo2 == null)) {
+                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(GobiernoCorporativo2));
+            }
+            if ((Otros2 == null)) {
+                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(Otros2));
+            }
+            if ((ConsejoDirectivo3 == null)) {
+                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(ConsejoDirectivo3));
+            }
+            if ((AltaGerencia3 == null)) {
+                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(AltaGerencia3));
+            }
+            if ((GerenciaMedia3 == null)) {
+                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(GerenciaMedia3));
+            }
+            if ((EjecutivosNegocios3 == null)) {
+                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(EjecutivosNegocios3));
+            }
+            if ((Otros3 == null)) {
+                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[46].Value = ((string)(Otros3));
+            }
+            if ((Otrostxt3 == null)) {
+                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(Otrostxt3));
+            }
+            if ((CertificadoParticipacion4 == null)) {
+                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[48].Value = ((string)(CertificadoParticipacion4));
+            }
+            if ((DiplomadoNacional4 == null)) {
+                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(DiplomadoNacional4));
+            }
+            if ((CertificacionAcreditacionInternacional4 == null)) {
+                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(CertificacionAcreditacionInternacional4));
+            }
+            if ((MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 == null)) {
+                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4));
+            }
+            if ((Horas2_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[52].Value = ((string)(Horas2_5));
+            }
+            if ((Horas10_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[53].Value = ((string)(Horas10_5));
+            }
+            if ((Horas20_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(Horas20_5));
+            }
+            if ((Horas40_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(Horas40_5));
+            }
+            if ((HorasMas_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(HorasMas_5));
+            }
+            if ((Sugerenias == null)) {
+                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(Sugerenias));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Encuesta.SP_EncuestaIntecDataTable GetData(
+                    global::System.Nullable<int> ID_Encuesta, 
+                    global::System.Nullable<int> ID_Usuario, 
+                    string IP, 
+                    string Cargo, 
+                    string NombreInts, 
+                    string NombreyCargo, 
+                    string Telefono, 
+                    string Correo, 
+                    global::System.Nullable<int> GestionIntegralRiesgos1, 
+                    global::System.Nullable<int> RiesgoLiquidez1, 
+                    global::System.Nullable<int> RiesgoCredito1, 
+                    global::System.Nullable<int> RiesgoMercado1, 
+                    global::System.Nullable<int> RiesgoOperativo1, 
+                    global::System.Nullable<int> NIIFContabilidad1, 
+                    global::System.Nullable<int> GestionTesoreria1, 
+                    global::System.Nullable<int> BigData1, 
+                    global::System.Nullable<int> MatematicaFinanciera1, 
+                    global::System.Nullable<int> Ciberseguridad1, 
+                    global::System.Nullable<int> PrevencionLavadoActivos1, 
+                    global::System.Nullable<int> RegulacionDerechoFinanciero1, 
+                    global::System.Nullable<int> GestionFideicomisos1, 
+                    global::System.Nullable<int> GobiernoCorporativo1, 
+                    global::System.Nullable<int> Otros1, 
+                    string Otrostxt1, 
+                    string GestionIntegralRiesgos2, 
+                    string RiesgoLiquidez2, 
+                    string RiesgoCredito2, 
+                    string RiesgoMercado2, 
+                    string RiesgoOperativo2, 
+                    string NIIFContabilidad2, 
+                    string GestionTesoreria2, 
+                    string BigData2, 
+                    string MatematicaFinanciera2, 
+                    string ModelosEconometricos2, 
+                    string Ciberseguridad2, 
+                    string PrevencionLavadoActivos2, 
+                    string TransformacionDigital2, 
+                    string RegulacionDerechoFinanciero2, 
+                    string GestionFideicomisos2, 
+                    string GobiernoCorporativo2, 
+                    string Otros2, 
+                    string ConsejoDirectivo3, 
+                    string AltaGerencia3, 
+                    string GerenciaMedia3, 
+                    string EjecutivosNegocios3, 
+                    string Otros3, 
+                    string Otrostxt3, 
+                    string CertificadoParticipacion4, 
+                    string DiplomadoNacional4, 
+                    string CertificacionAcreditacionInternacional4, 
+                    string MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4, 
+                    string Horas2_5, 
+                    string Horas10_5, 
+                    string Horas20_5, 
+                    string Horas40_5, 
+                    string HorasMas_5, 
+                    string Sugerenias) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Encuesta.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Encuesta.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ID_Usuario.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Usuario.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((IP == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(IP));
+            }
+            if ((Cargo == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Cargo));
+            }
+            if ((NombreInts == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(NombreInts));
+            }
+            if ((NombreyCargo == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(NombreyCargo));
+            }
+            if ((Telefono == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((string)(Correo));
+            }
+            if ((GestionIntegralRiesgos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(GestionIntegralRiesgos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoLiquidez1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(RiesgoLiquidez1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoCredito1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(RiesgoCredito1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoMercado1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(RiesgoMercado1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((RiesgoOperativo1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[13].Value = ((int)(RiesgoOperativo1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((NIIFContabilidad1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(NIIFContabilidad1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((GestionTesoreria1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(GestionTesoreria1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((BigData1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(BigData1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((MatematicaFinanciera1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(MatematicaFinanciera1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Ciberseguridad1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[18].Value = ((int)(Ciberseguridad1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((PrevencionLavadoActivos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((int)(PrevencionLavadoActivos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((RegulacionDerechoFinanciero1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((int)(RegulacionDerechoFinanciero1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((GestionFideicomisos1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[21].Value = ((int)(GestionFideicomisos1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((GobiernoCorporativo1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[22].Value = ((int)(GobiernoCorporativo1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Otros1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[23].Value = ((int)(Otros1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Otrostxt1 == null)) {
+                this.Adapter.SelectCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[24].Value = ((string)(Otrostxt1));
+            }
+            if ((GestionIntegralRiesgos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[25].Value = ((string)(GestionIntegralRiesgos2));
+            }
+            if ((RiesgoLiquidez2 == null)) {
+                this.Adapter.SelectCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[26].Value = ((string)(RiesgoLiquidez2));
+            }
+            if ((RiesgoCredito2 == null)) {
+                this.Adapter.SelectCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[27].Value = ((string)(RiesgoCredito2));
+            }
+            if ((RiesgoMercado2 == null)) {
+                this.Adapter.SelectCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[28].Value = ((string)(RiesgoMercado2));
+            }
+            if ((RiesgoOperativo2 == null)) {
+                this.Adapter.SelectCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[29].Value = ((string)(RiesgoOperativo2));
+            }
+            if ((NIIFContabilidad2 == null)) {
+                this.Adapter.SelectCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[30].Value = ((string)(NIIFContabilidad2));
+            }
+            if ((GestionTesoreria2 == null)) {
+                this.Adapter.SelectCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[31].Value = ((string)(GestionTesoreria2));
+            }
+            if ((BigData2 == null)) {
+                this.Adapter.SelectCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[32].Value = ((string)(BigData2));
+            }
+            if ((MatematicaFinanciera2 == null)) {
+                this.Adapter.SelectCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[33].Value = ((string)(MatematicaFinanciera2));
+            }
+            if ((ModelosEconometricos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[34].Value = ((string)(ModelosEconometricos2));
+            }
+            if ((Ciberseguridad2 == null)) {
+                this.Adapter.SelectCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[35].Value = ((string)(Ciberseguridad2));
+            }
+            if ((PrevencionLavadoActivos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[36].Value = ((string)(PrevencionLavadoActivos2));
+            }
+            if ((TransformacionDigital2 == null)) {
+                this.Adapter.SelectCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[37].Value = ((string)(TransformacionDigital2));
+            }
+            if ((RegulacionDerechoFinanciero2 == null)) {
+                this.Adapter.SelectCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[38].Value = ((string)(RegulacionDerechoFinanciero2));
+            }
+            if ((GestionFideicomisos2 == null)) {
+                this.Adapter.SelectCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[39].Value = ((string)(GestionFideicomisos2));
+            }
+            if ((GobiernoCorporativo2 == null)) {
+                this.Adapter.SelectCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[40].Value = ((string)(GobiernoCorporativo2));
+            }
+            if ((Otros2 == null)) {
+                this.Adapter.SelectCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[41].Value = ((string)(Otros2));
+            }
+            if ((ConsejoDirectivo3 == null)) {
+                this.Adapter.SelectCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[42].Value = ((string)(ConsejoDirectivo3));
+            }
+            if ((AltaGerencia3 == null)) {
+                this.Adapter.SelectCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[43].Value = ((string)(AltaGerencia3));
+            }
+            if ((GerenciaMedia3 == null)) {
+                this.Adapter.SelectCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[44].Value = ((string)(GerenciaMedia3));
+            }
+            if ((EjecutivosNegocios3 == null)) {
+                this.Adapter.SelectCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[45].Value = ((string)(EjecutivosNegocios3));
+            }
+            if ((Otros3 == null)) {
+                this.Adapter.SelectCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[46].Value = ((string)(Otros3));
+            }
+            if ((Otrostxt3 == null)) {
+                this.Adapter.SelectCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[47].Value = ((string)(Otrostxt3));
+            }
+            if ((CertificadoParticipacion4 == null)) {
+                this.Adapter.SelectCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[48].Value = ((string)(CertificadoParticipacion4));
+            }
+            if ((DiplomadoNacional4 == null)) {
+                this.Adapter.SelectCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[49].Value = ((string)(DiplomadoNacional4));
+            }
+            if ((CertificacionAcreditacionInternacional4 == null)) {
+                this.Adapter.SelectCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[50].Value = ((string)(CertificacionAcreditacionInternacional4));
+            }
+            if ((MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 == null)) {
+                this.Adapter.SelectCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[51].Value = ((string)(MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4));
+            }
+            if ((Horas2_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[52].Value = ((string)(Horas2_5));
+            }
+            if ((Horas10_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[53].Value = ((string)(Horas10_5));
+            }
+            if ((Horas20_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[54].Value = ((string)(Horas20_5));
+            }
+            if ((Horas40_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[55].Value = ((string)(Horas40_5));
+            }
+            if ((HorasMas_5 == null)) {
+                this.Adapter.SelectCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[56].Value = ((string)(HorasMas_5));
+            }
+            if ((Sugerenias == null)) {
+                this.Adapter.SelectCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[57].Value = ((string)(Sugerenias));
+            }
+            Encuesta.SP_EncuestaIntecDataTable dataTable = new Encuesta.SP_EncuestaIntecDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

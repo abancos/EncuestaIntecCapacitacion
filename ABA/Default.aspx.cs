@@ -301,7 +301,7 @@ namespace ABA
                 string p21 = "";
                 if (rb211.Checked == true)
                 {
-                    p21 = rb211.Value + " , ";
+                    p21 += rb211.Value + " , ";
                 }
                 if (rb212.Checked == true)
                 {
@@ -325,19 +325,19 @@ namespace ABA
                 string p22 = "";
                 if (rb221.Checked == true)
                 {
-                    p22 = rb221.Value + " , ";
+                    p22 += rb221.Value + " , ";
                 }
                 if (rb222.Checked == true)
                 {
-                    p22 = rb222.Value + " , ";
+                    p22 += rb222.Value + " , ";
                 }
                 if (rb223.Checked == true)
                 {
-                    p22 = rb223.Value + " , ";
+                    p22 += rb223.Value + " , ";
                 }
                 if (rb224.Checked == true)
                 {
-                    p22 = rb224.Value + " , ";
+                    p22 += rb224.Value + " , ";
                 }
                 if (rb22Otro.Checked == true)
                 {
@@ -438,7 +438,7 @@ namespace ABA
                 {
                     p26 += txt26.Value + " , ";
                 }
-                objInfo.RiesgoOperativo2 = p26;
+                objInfo.NIIFContabilidad2 = p26;
 
                 string p27 = "";
                 if (rb271.Checked == true)
@@ -648,6 +648,54 @@ namespace ABA
                 }
 
                 objInfo.Otros2 = p35;
+
+                string p36 = "";
+                if (txt36.Value != "")
+                {
+                    p36 += txt36.Value + " , ";
+                }
+                if (rb361.Checked == true)
+                {
+                    p36 += rb361.Value + " , ";
+                }
+                if (rb362.Checked == true)
+                {
+                    p36 += rb362.Value + " , ";
+                }
+                if (rb363.Checked == true)
+                {
+                    p36 += rb363.Value + " , ";
+                }
+                if (rb364.Checked == true)
+                {
+                    p36 += rb364.Value + " , ";
+                }
+
+                objInfo.ModelosEconometricos2 = p36;
+
+                string p37 = "";
+                if (txt37.Value != "")
+                {
+                    p37 += txt37.Value + " , ";
+                }
+                if (rb371.Checked == true)
+                {
+                    p37 += rb371.Value + " , ";
+                }
+                if (rb372.Checked == true)
+                {
+                    p37 += rb372.Value + " , ";
+                }
+                if (rb373.Checked == true)
+                {
+                    p37 += rb373.Value + " , ";
+                }
+                if (rb374.Checked == true)
+                {
+                    p37 += rb374.Value + " , ";
+                }
+
+                objInfo.TransformacionDigital2 = p37;
                 #endregion
 
                 #region Pregunta 3
@@ -785,7 +833,7 @@ namespace ABA
                 {
                     d22 += txtOtrosD2.Value + " , ";
                 }
-                objInfo.DiplomadoEntidadNacional4 = d22;
+                objInfo.DiplomadoNacional4 = d22;
 
                 string d23 = "";
                 if (rd231.Checked == true)
@@ -808,7 +856,7 @@ namespace ABA
                 {
                     d23 += txtOtrosD3.Value + " , ";
                 }
-                objInfo.DiplomadoEntidadInternacional4 = d23;
+                objInfo.CertificacionAcreditacionInternacional4 = d23;
 
                 string d24 = "";
                 if (rd241.Checked == true)
@@ -831,53 +879,8 @@ namespace ABA
                 {
                     d24 += txtOtrosD4.Value + " , ";
                 }
-                objInfo.CertificadoEspecialistaNacional4 = d24;
+                objInfo.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 = d24;
 
-                string d25 = "";
-                if (rd251.Checked == true)
-                {
-                    d25 = rd251.Value + " , ";
-                }
-                if (rd252.Checked == true)
-                {
-                    d25 += rd252.Value + " , ";
-                }
-                if (rd253.Checked == true)
-                {
-                    d25 += rd253.Value + " , ";
-                }
-                if (rd254.Checked == true)
-                {
-                    d25 += rd254.Value + " , ";
-                }
-                if (rd25Otro.Checked == true)
-                {
-                    d25 += txtOtrosD4.Value + " , ";
-                }
-                objInfo.CertificadoEspecialistaInternacional4 = d25;
-
-                string d26 = "";
-                if (rd261.Checked == true)
-                {
-                    d26 = rd261.Value + " , ";
-                }
-                if (rd262.Checked == true)
-                {
-                    d26 += rd262.Value + " , ";
-                }
-                if (rd263.Checked == true)
-                {
-                    d26 += rd263.Value + " , ";
-                }
-                if (rd264.Checked == true)
-                {
-                    d26 += rd264.Value + " , ";
-                }
-                if (rd26Otro.Checked == true)
-                {
-                    d26 += txtOtrosD4.Value + " , ";
-                }
-                objInfo.Maestria4 = d26;
 
 
                 #endregion
@@ -1021,9 +1024,9 @@ namespace ABA
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw ex;
             }
         }
 
@@ -1032,7 +1035,7 @@ namespace ABA
             try
             {
                 var fromAddress = new MailAddress("encuestasabard@gmail.com", "Encuesta Intec");
-                var toAddress = new MailAddress("jrodriguez@aba.org.do", "Jorge Rodriguez");
+                var toAddress = new MailAddress("emedina@aba.org.do", "Elianny Medina");
                 const string fromPassword = "M@nowar18";
                 const string subject = "Encuesta ABA-INTEC completada";
                 string body = "Encuesta completada por " + txtName.Value + " del " + cboBank.Value;

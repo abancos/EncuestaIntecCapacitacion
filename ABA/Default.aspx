@@ -510,6 +510,21 @@
                     </ul>
                     <ul class="data-list floated clearfix">
                         <li style="width: 20%">
+                            <label>Modelos Econométricos/Stress Testing</label></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb36" value="Consejo Directivo" id="rb361" onclick="showhidetxt2('MainContent_rb36Otro', 'MainContent_txt36')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb36" value="Alta Gerencia" id="rb362" onclick="showhidetxt2('MainContent_rb36Otro', 'MainContent_txt36')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb36" value="Gerencia Media" id="rb363" onclick="showhidetxt2('MainContent_rb36Otro', 'MainContent_txt36')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb36" value="Ejecutivos de Negocios" id="rb364" onclick="showhidetxt2('MainContent_rb36Otro', 'MainContent_txt36')" /></li>
+                        <li style="display: inline; width: 20%;">
+                            <input type="checkbox" runat="server" name="rb36" value="otro" id="rb36Otro" onclick="showhidetxt2('MainContent_rb36Otro', 'MainContent_txt36');" />
+                            <input type="text" id="txt36" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
+                    </ul>
+                    <ul class="data-list floated clearfix">
+                        <li style="width: 20%">
                             <label>Ciberseguridad</label></li>
                         <li class="center">
                             <input type="checkbox" runat="server" name="rb30" value="Consejo Directivo" id="rb301" onclick="showhidetxt2('MainContent_rb30Otro', 'MainContent_txt30')" /></li>
@@ -537,6 +552,21 @@
                         <li style="display: inline; width: 20%;">
                             <input type="checkbox" runat="server" name="rb31" value="otro" id="rb31Otro" onclick="showhidetxt2('MainContent_rb31Otro', 'MainContent_txt31');" />
                             <input type="text" id="txt31" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
+                    </ul>
+                       <ul class="data-list floated clearfix">
+                        <li style="width: 20%">
+                            <label>Transformación Digital de la Banca</label></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb37" value="Consejo Directivo" id="rb371" onclick="showhidetxt2('MainContent_rb37Otro', 'MainContent_txt37')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb37" value="Alta Gerencia" id="rb372" onclick="showhidetxt2('MainContent_rb37Otro', 'MainContent_txt37')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb37" value="Gerencia Media" id="rb373" onclick="showhidetxt2('MainContent_rb37Otro', 'MainContent_txt37')" /></li>
+                        <li class="center">
+                            <input type="checkbox" runat="server" name="rb37" value="Ejecutivos de Negocios" id="rb374" onclick="showhidetxt2('MainContent_rb37Otro', 'MainContent_txt37')" /></li>
+                        <li style="display: inline; width: 20%;">
+                            <input type="checkbox" runat="server" name="rb37" value="otro" id="rb37Otro" onclick="showhidetxt2('MainContent_rb37Otro', 'MainContent_txt37');" />
+                            <input type="text" id="txt37" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
                     </ul>
                     <ul class="data-list floated clearfix">
                         <li style="width: 20%">
@@ -739,7 +769,7 @@
                     </ul>
                     <ul class="data-list floated clearfix">
                         <li style="width: 20%">
-                            <label>Certificado de Participación (sin acreditación)</label></li>
+                            <label>Certificado de Participación (curso)</label></li>
                         <li class="center">
                             <input type="checkbox" runat="server"  name="rd21" value="Consejo Directivo" id="rd211" onclick="showhidetxt2('MainContent_rd21Otro', 'MainContent_txtOtrosD1')" /></li>
                         <li class="center">
@@ -769,7 +799,7 @@
                     </ul>
                     <ul class="data-list floated clearfix">
                         <li style="width: 20%">
-                            <label>Diplomado acreditado con entidad internacional</label></li>
+                            <label>Certificación con acreditación internacional</label></li>
                         <li class="center">
                             <input type="checkbox" runat="server"  name="rd23" value="Consejo Directivo" id="rd231" onclick="showhidetxt2('MainContent_rd23Otro', 'MainContent_txtOtrosD3')" /></li>
                         <li class="center">
@@ -784,7 +814,7 @@
                     </ul>
                     <ul class="data-list floated clearfix">
                         <li style="width: 20%">
-                            <label>Certificado de Especialista con acreditación nacional</label></li>
+                            <label>Maestría en Finanzas, Concentración en Riesgos e Ingeniería Financiera</label></li>
                         <li class="center">
                             <input type="checkbox"  name="rd24" runat="server" value="Consejo Directivo" id="rd241" onclick="showhidetxt2('MainContent_rd24Otro', 'MainContent_txtOtrosD4')" /></li>
                         <li class="center">
@@ -797,36 +827,7 @@
                             <input type="checkbox" runat="server" name="rd24" value="otro" id="rd24Otro" onclick="showhidetxt2('MainContent_rd24Otro', 'MainContent_txtOtrosD4')" />
                             <input type="text" id="txtOtrosD4" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
                     </ul>
-                    <ul class="data-list floated clearfix">
-                        <li style="width: 20%">
-                            <label>Certificado de Especialista con acreditación internacional</label></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server"  name="rd25" value="Consejo Directivo" id="rd251" onclick="showhidetxt2('MainContent_rd25Otro', 'MainContent_txtOtrosD5')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd25" value="Alta Gerencia" id="rd252" onclick="showhidetxt2('MainContent_rd25Otro', 'MainContent_txtOtrosD5')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd25" value="Gerencia Media" id="rd253" onclick="showhidetxt2('MainContent_rd25Otro', 'MainContent_txtOtrosD5')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd25" value="Ejecutivos de Negocios" id="rd254" onclick="showhidetxt2('MainContent_rd25Otro', 'MainContent_txtOtrosD5')" /></li>
-                        <li style="display: inline; width: 20%;">
-                            <input type="checkbox" runat="server" name="rd25" value="otro" id="rd25Otro" onclick="showhidetxt2('MainContent_rd25Otro', 'MainContent_txtOtrosD5');" />
-                            <input type="text" id="txtOtrosD5" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
-                    </ul>
-                    <ul class="data-list floated clearfix">
-                        <li style="width: 20%">
-                            <label>Maestría</label></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server"  name="rd26" value="Consejo Directivo" id="rd261" onclick="showhidetxt2('MainContent_rd26Otro', 'MainContent_txtOtrosD6')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd26" value="Alta Gerencia" id="rd262" onclick="showhidetxt2('MainContent_rd26Otro', 'MainContent_txtOtrosD6')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd26" value="Gerencia Media" id="rd263" onclick="showhidetxt2('MainContent_rd26Otro', 'MainContent_txtOtrosD6')" /></li>
-                        <li class="center">
-                            <input type="checkbox" runat="server" name="rd26" value="Ejecutivos de Negocios" id="rd264" onclick="showhidetxt2('MainContent_rd26Otro', 'MainContent_txtOtrosD6')" /></li>
-                        <li style="display: inline; width: 20%;">
-                            <input type="checkbox" runat="server" name="rd26" value="otro" id="rd26Otro" onclick="showhidetxt2('MainContent_rd26Otro', 'MainContent_txtOtrosD6');" />
-                            <input type="text" id="txtOtrosD6" hidden="hidden" runat="server" size="15" placeholder="Por favor detallar" /></li>
-                    </ul>
+                 
                     <br />
                 </div>
             </div>

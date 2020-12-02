@@ -44,8 +44,10 @@ namespace DAL.EncuestaIntec
         public string GestionTesoreria2 { get; set; }
         public string BigData2 { get; set; }
         public string MatematicaFinanciera2 { get; set; }
+        public string ModelosEconometricos2 { get; set; }
         public string Ciberseguridad2 { get; set; }
         public string PrevencionLavadoActivos2 { get; set; }
+        public string TransformacionDigital2 { get; set; }
         public string RegulacionDerechoFinanciero2 { get; set; }
         public string GestionFideicomisos2 { get; set; }
         public string GobiernoCorporativo2 { get; set; }
@@ -58,11 +60,9 @@ namespace DAL.EncuestaIntec
         public string Otros3 { get; set; }
         public string Otrostxt3 { get; set; }
         public string CertificadoParticipacion4 { get; set; }
-        public string DiplomadoEntidadNacional4 { get; set; }
-        public string DiplomadoEntidadInternacional4 { get; set; }
-        public string CertificadoEspecialistaNacional4 { get; set; }
-        public string CertificadoEspecialistaInternacional4 { get; set; }
-        public string Maestria4 { get; set; }
+        public string DiplomadoNacional4 { get; set; }
+        public string CertificacionAcreditacionInternacional4 { get; set; }
+        public string MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4 { get; set; }
         public string Horas2_5 { get; set; }
         public string Horas10_5 { get; set; }
         public string Horas20_5 { get; set; }

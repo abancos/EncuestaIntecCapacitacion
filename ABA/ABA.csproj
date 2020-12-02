@@ -432,9 +432,11 @@
     <Content Include="js\.DS_Store" />
     <Content Include="js\fancybox\source\.DS_Store" />
     <Content Include="Clean.Master" />
+    <None Include="Properties\PublishProfiles\AbaCapacitacion - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ABADR - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\ABADR - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ABADRTEST - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Resultados.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -569,7 +571,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

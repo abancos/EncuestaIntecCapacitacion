@@ -47,13 +47,7 @@ namespace BLL._2014
                 taInsEncuesta = new SP_EncuestaIntecTableAdapter();
                 dtInsEncuesta = new DAL._2014.Encuesta.SP_EncuestaIntecDataTable();
 
-                taInsEncuesta.Fill(dtInsEncuesta, I.ID_Encuesta, I.ID_Usuario, I.IP, I.Cargo, I.NombreInts, I.NombreyCargo, I.Telefono, I.Correo, I.GestionIntegralRiesgos1, I.RiesgoLiquidez1, I.RiesgoCredito1, I.RiesgoMercado1, I.RiesgoOperativo1, I.NIIFContabilidad1, I.GestionTesoreria1, I.BigData1, I.MatematicaFinanciera1, I.Ciberseguridad1
-                , I.PrevencionLavadoActivos1, I.RegulacionDerechoFinanciero1, I.GestionFideicomisos1, I.GobiernoCorporativo1
-                , I.Otros1, I.Otrostxt1, I.GestionIntegralRiesgos2, I.RiesgoLiquidez2, I.RiesgoCredito2, I.RiesgoMercado2
-                , I.RiesgoOperativo2, I.NIIFContabilidad2, I.GestionTesoreria2, I.BigData2, I.MatematicaFinanciera2
-                , I.Ciberseguridad2, I.PrevencionLavadoActivos2, I.RegulacionDerechoFinanciero2, I.GestionFideicomisos2
-                , I.GobiernoCorporativo2, I.Otros2, I.Otrostxt2, I.ConsejoDirectivo3, I.AltaGerencia3, I.GerenciaMedia3, I.EjecutivosNegocios3, I.Otros3, I.Otrostxt3, I.CertificadoParticipacion4, I.DiplomadoEntidadInternacional4, I.CertificadoEspecialistaNacional4, I.CertificadoEspecialistaInternacional4
-                , I.Maestria4, I.Horas2_5, I.Horas10_5, I.Horas20_5, I.Horas40_5, I.HorasMas_5, I.Sugerencias);
+                taInsEncuesta.Fill(dtInsEncuesta, I.ID_Encuesta, I.ID_Usuario, I.IP, I.Cargo, I.NombreInts, I.NombreyCargo, I.Telefono, I.Correo, I.GestionIntegralRiesgos1, I.RiesgoLiquidez1, I.RiesgoCredito1, I.RiesgoMercado1, I.RiesgoOperativo1, I.NIIFContabilidad1, I.GestionTesoreria1, I.BigData1, I.MatematicaFinanciera1, I.Ciberseguridad1, I.PrevencionLavadoActivos1, I.RegulacionDerechoFinanciero1, I.GestionFideicomisos1, I.GobiernoCorporativo1, I.Otros1, I.Otrostxt1, I.GestionIntegralRiesgos2, I.RiesgoLiquidez2, I.RiesgoCredito2, I.RiesgoMercado2, I.RiesgoOperativo2, I.NIIFContabilidad2, I.GestionTesoreria2, I.BigData2, I.MatematicaFinanciera2, I.ModelosEconometricos2, I.Ciberseguridad2, I.PrevencionLavadoActivos2, I.TransformacionDigital2, I.RegulacionDerechoFinanciero2, I.GestionFideicomisos2, I.GobiernoCorporativo2, I.Otros2, I.ConsejoDirectivo3, I.AltaGerencia3, I.GerenciaMedia3, I.EjecutivosNegocios3, I.Otros3, I.Otrostxt3, I.CertificadoParticipacion4, I.DiplomadoNacional4, I.CertificacionAcreditacionInternacional4, I.MaestriaFinanzasConcentracionRiesgosIngenieriaFinan4, I.Horas2_5, I.Horas10_5, I.Horas20_5, I.Horas40_5, I.HorasMas_5, I.Sugerencias);
 
             }
             catch (Exception ex)
